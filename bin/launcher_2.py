@@ -17,18 +17,18 @@ class Example(QWidget):
     def initUI(self):      
 
         hbox = QHBoxLayout(self)
-        pixmap = QPixmap("../ui/elements/background.jpg")
+        pixmap = QPixmap("../ui/elements/background_small.png")
 
         lbl = QLabel(self)
         lbl.setPixmap(pixmap)
 
         hbox.addWidget(lbl)
         self.setLayout(hbox)
-        self.resize(1920, 1080)
-        self.move(10, 10)
-        self.setWindowTitle('Dolos')
-	#self.showFullScreen()
-        self.show()        
+	#self.resize(1920, 1080)
+        #self.move(10, 10)
+        #self.setWindowTitle('Dolos')
+	self.showFullScreen()
+        #self.show()        
         
         
 if __name__ == '__main__':
