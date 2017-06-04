@@ -15,7 +15,7 @@ class dolos(QWidget):
         self.setWindowTitle('Dolos')
         self.setAttribute(Qt.WA_StyledBackground)
         self.setStyleSheet("background-image: url(/home/atlas/dev/dolos/ui/elements/background.png); border: none")
-        #self.showFullScreen()
+        self.showFullScreen()
         self.show()
     
 if __name__ == '__main__':
