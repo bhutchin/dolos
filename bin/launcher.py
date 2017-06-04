@@ -2,16 +2,18 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtCore import Qt
 
 class dolos(QWidget):
 
     def __init__(self):
-		super(dolos, self).__init__()
+		super(dolos,self).__init__()
 		self.window()
 
     def window(self):
-        #window = QWidget()
+       #window = QWidget()
         self.setWindowTitle('Dolos')
+        self.setAttribute(Qt.WA_StyledBackground)
         self.setStyleSheet("background-image: url(/home/atlas/dev/dolos/ui/elements/background.png); border: none")
         #self.showFullScreen()
         self.show()
