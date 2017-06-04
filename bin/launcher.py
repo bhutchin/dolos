@@ -1,8 +1,9 @@
 #! /usr/bin/python
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLayout, QHBoxLayout
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap
 
 
 class dolos(QWidget):
@@ -11,12 +12,19 @@ class dolos(QWidget):
 		self.window()
 
 	def window(self):
-		# window = QWidget()
 		self.setWindowTitle('Dolos')
 		self.setAttribute(Qt.WA_StyledBackground)
 		self.setStyleSheet("background-image: url(/home/atlas/dev/dolos/ui/elements/background.png); border: none")
 		self.showFullScreen()
 		self.setFocus
+		nes = QLabel()
+		nes.setPixmap(QPixmap("/home/atlas/dev/dolos/ui/elements/nes.jpg"))
+		snes = QLabel()
+		snes.setPixmap(QPixmap("/home/atlas/dev/dolos/ui/elements/snes.jpg"))
+		hbox = QHBoxLayout()
+		hbox.addWidget(nes)
+		hbox.addWidget(snes)
+		self.setLayout(hbox)
 		#self.show()
 
 	def keyPressEvent(self, event):
