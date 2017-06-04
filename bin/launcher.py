@@ -1,16 +1,22 @@
 #! /usr/bin/python
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 
+class dolos(QWidget):
 
-app = QApplication(sys.argv)
+    def __init__(self):
+		super(dolos, self).__init__()
+		self.window()
 
-window = QWidget()
-window.move(300, 300)
-window.setWindowTitle('Simple')
-window.setStyleSheet("background-image: url(../ui/elements/background.png); border: none")
-window.showFullScreen()
-#window.show()
+    def window(self):
+        #window = QWidget()
+        self.setWindowTitle('Dolos')
+        self.setStyleSheet("background-image: url(../ui/elements/background.png); border: none")
+        self.showFullScreen()
+        #window.show()
     
-sys.exit(app.exec_())
+if __name__ == '__main__':
+	app = QApplication(sys.argv)
+	ex = dolos()
+	sys.exit(app.exec_())
