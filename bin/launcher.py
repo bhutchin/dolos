@@ -12,9 +12,9 @@ class dolos(QWidget):
     def window(self):
         #window = QWidget()
         self.setWindowTitle('Dolos')
-        self.setStyleSheet("background-image: url(../ui/elements/background.png); border: none")
-        self.showFullScreen()
-        #window.show()
+        self.setStyleSheet("background-image: url(/home/atlas/dev/dolos/ui/elements/background.png); border: none")
+        #self.showFullScreen()
+        self.show()
     
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
